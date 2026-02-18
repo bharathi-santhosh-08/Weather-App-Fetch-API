@@ -1,0 +1,183 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+/* ===== HEADER ===== */
+.header {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.header h1 {
+  font-weight: 600;
+}
+
+.header p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* ===== SEARCH SECTION ===== */
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-section input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-section button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0077ff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-section button:hover {
+  background: #0077ff;
+  color: white;
+}
+
+/* ===== ERROR MESSAGE ===== */
+.error-message {
+  text-align: center;
+  color: #ff4d4f;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* ===== WEATHER CARD ===== */
+.weather-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  display: none;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.weather-card .city {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.weather-card .icon {
+  width: 90px;
+  margin: 10px 0;
+}
+
+.weather-card .temp {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.weather-card .description {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* ===== DETAILS ===== */
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* ===== TOGGLE BUTTON ===== */
+.toggle-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #4facfe;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-btn:hover {
+  background: #0077ff;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  margin-top: auto;
+  padding: 15px;
+  font-size: 13px;
+  color: white;
+  opacity: 0.9;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .search-section {
+    flex-direction: column;
+  }
+
+  .search-section button {
+    width: 100%;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
